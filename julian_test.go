@@ -10,7 +10,8 @@ var dataTimeToJulianDay = []struct {
 	out float64
 }{
 	{time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC), unixEpochJulianDay},
-	{time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC), 2451544.5},
+	{time.Date(1995, 1, 1, 0, 0, 0, 0, time.UTC), 2449718.5},
+	{time.Date(2020, 1, 1, 0, 0, 0, 0, time.UTC), 2458849.5},
 }
 
 func TestTimeToJulianDay(t *testing.T) {
@@ -27,7 +28,8 @@ var dataJulianDayToTime = []struct {
 	out time.Time
 }{
 	{unixEpochJulianDay, time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC)},
-	{2451544.5, time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)},
+	{2449718.5, time.Date(1995, 1, 1, 0, 0, 0, 0, time.UTC)},
+	{2458849.5, time.Date(2020, 1, 1, 0, 0, 0, 0, time.UTC)},
 }
 
 func TestJulianDayToTime(t *testing.T) {
