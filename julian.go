@@ -16,5 +16,5 @@ func TimeToJulianDay(t time.Time) float64 {
 
 // JulianDayToTime converts a Julian day into a time.Time.
 func JulianDayToTime(d float64) time.Time {
-	return time.Unix(int64(d-unixEpochJulianDay)*secondsInADay, 0)
+	return time.Unix(int64((d-unixEpochJulianDay)*secondsInADay), 0)
 }
