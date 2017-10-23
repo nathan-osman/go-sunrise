@@ -4,9 +4,8 @@ import (
 	"testing"
 )
 
-
 var dataSolarAnomaly = []struct {
-	in float64
+	in  float64
 	out float64
 }{
 	// April 1, 2004. 5 degrees east longitude. This is a test problem from (http://aa.quae.nl/en/reken/zonpositie.html)
@@ -15,9 +14,8 @@ var dataSolarAnomaly = []struct {
 	// Prime meridian on January 1, 1990
 	{2447893, 281.55531},
 	// Toronto. January 1, 2000
-	{2451545.2205,281.18486 },
+	{2451545.2205, 281.18486},
 }
-
 
 func TestSolarAnomaly(t *testing.T) {
 	for _, tt := range dataSolarAnomaly {
@@ -27,7 +25,3 @@ func TestSolarAnomaly(t *testing.T) {
 		}
 	}
 }
-
-
-
-

@@ -5,14 +5,14 @@ import (
 )
 
 var dataTestUpdatePerihelion = []struct {
-	in float64
+	in  float64
 	out float64
 }{
 	// January 1 2017. Example from the wikipedia article.
 	{2457784.958333, 102.98437},
 	// April 1, 2004. 5 degrees east longitude. This is a test problem from (http://aa.quae.nl/en/reken/zonpositie.html)
 	// The problem was slightly modified to take Julian leap seconds into account in anomaly.go. Expect small deviations from the above site.
-	{2453097,102.94356},
+	{2453097, 102.94356},
 	// Prime meridian, January 1, 1990
 	{2447892.5, 102.89826},
 	// Toronto, January 1, 2000
@@ -21,9 +21,9 @@ var dataTestUpdatePerihelion = []struct {
 
 var dataTestEclipticLongitude = []struct {
 	anomalyIn float64
-	centerIn float64
-	jDateIn float64
-	out float64
+	centerIn  float64
+	jDateIn   float64
+	out       float64
 }{
 	// April 1, 2004. 5 degrees east longitude. This is a test problem from (http://aa.quae.nl/en/reken/zonpositie.html)
 	// The problem was slightly modified to take Julian leap seconds into account in anomaly.go. Expect small deviations from the above site.
@@ -52,4 +52,3 @@ func TestEclipticLongitude(t *testing.T) {
 		}
 	}
 }
-
