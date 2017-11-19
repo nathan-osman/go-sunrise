@@ -21,7 +21,7 @@ func TestSolarTransit(t *testing.T) {
 	for _, tt := range dataSolarMeanAnomaly {
 		v := SolarMeanAnomaly(tt.in)
 		if Round(v, DefaultPlaces) != Round(tt.out, DefaultPlaces) {
-			t.Fatalf("%f != %f. %t and %t", v, tt.out, v, tt.out)
+			t.Fatalf("%f != %f", v, tt.out)
 		}
 	}
 }

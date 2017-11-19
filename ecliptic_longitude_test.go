@@ -23,7 +23,7 @@ func TestUpdatePerihelion(t *testing.T) {
 	for _, tt := range dataTestUpdatePerihelion {
 		v := Round(UpdatePerihelion(tt.in), DefaultPlaces)
 		if v != tt.out {
-			t.Fatalf("%f != %f. Of type %t and %t", v, tt.out, v, tt.out)
+			t.Fatalf("%f != %f", v, tt.out)
 		}
 	}
 }
@@ -47,8 +47,7 @@ func TestEclipticLongitude(t *testing.T) {
 	for _, tt := range dataTestEclipticLongitude {
 		v := Round(EclipticLongitude(tt.anomalyIn, tt.centerIn, tt.jDateIn), DefaultPlaces)
 		if v != tt.out {
-			t.Log(tt)
-			t.Fatalf("%f != %f. Of type %t and %t", v, tt.out, v, tt.out)
+			t.Fatalf("%f != %f", v, tt.out)
 		}
 	}
 }
