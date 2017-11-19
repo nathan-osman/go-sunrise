@@ -18,8 +18,8 @@ var dataSolarTransite = []struct {
 }
 
 func TestSolarTransit(t *testing.T) {
-	for _, tt := range dataSolarAnomaly {
-		v := GetSolarAnomaly(tt.in)
+	for _, tt := range dataSolarMeanAnomaly {
+		v := SolarMeanAnomaly(tt.in)
 		if Round(v, places) != Round(tt.out, places) {
 			t.Fatalf("%f != %f. %t and %t", v, tt.out, v, tt.out)
 		}
