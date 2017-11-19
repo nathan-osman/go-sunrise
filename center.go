@@ -4,11 +4,15 @@ import (
 	"math"
 )
 
-// This module calculates the Equation of Center for the sun from Earth.
-
-func GetEquationOfCenter(anomaly float64) float64 {
-	// The numbers being multiplied below are coefficients for the Equation of Center for Earth
-	var anomalyInRad float64
-	anomalyInRad = anomaly * (math.Pi / 180)
-	return 1.9148*(math.Sin(anomalyInRad)) + 0.0200*math.Sin(2*anomalyInRad) + 0.0003*math.Sin(3*anomalyInRad)
+// EquationOfCenter calculates the angular difference between the position of
+// the earth in its elliptical orbit and the position it would occupy in a
+// circular orbit for the given mean anomaly.
+func EquationOfCenter(a float64) float64 {
+	var (
+		anomalyInRad = a * (math.Pi / 180)
+		anomalySin   = math.Sin(anomalyInRad)
+		anomaly2Sin  = math.Sin(2 * anomalyInRad)
+		anomaly3Sin  = math.Sin(3 * anomalyInRad)
+	)
+	return 1.9148*anomalySin + 0.0200*anomaly2Sin + 0.0003*anomaly3Sin
 }
