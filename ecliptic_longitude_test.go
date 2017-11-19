@@ -19,6 +19,15 @@ var dataTestUpdatePerihelion = []struct {
 	{2451544.5, 102.93005},
 }
 
+func TestUpdatePerihelion(t *testing.T) {
+	for _, tt := range dataTestUpdatePerihelion {
+		v := Round(UpdatePerihelion(tt.in), DefaultPlaces)
+		if v != tt.out {
+			t.Fatalf("%f != %f. Of type %t and %t", v, tt.out, v, tt.out)
+		}
+	}
+}
+
 var dataTestEclipticLongitude = []struct {
 	anomalyIn float64
 	centerIn  float64
@@ -32,15 +41,6 @@ var dataTestEclipticLongitude = []struct {
 	{281.55531, -1.88359, 2447892.5, 202.56998},
 	// Toronto. January 1, 2000
 	{281.18486, -1.88579, 2451544.5, 202.22912},
-}
-
-func TestUpdatePerihelion(t *testing.T) {
-	for _, tt := range dataTestUpdatePerihelion {
-		v := Round(UpdatePerihelion(tt.in), DefaultPlaces)
-		if v != tt.out {
-			t.Fatalf("%f != %f. Of type %t and %t", v, tt.out, v, tt.out)
-		}
-	}
 }
 
 func TestEclipticLongitude(t *testing.T) {
