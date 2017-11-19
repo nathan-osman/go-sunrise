@@ -14,7 +14,7 @@ var dataTestEclipticLongitude = []struct {
 	// The problem was slightly modified to take Julian leap seconds into account in anomaly.go. Expect small deviations from the above site.
 	{87.19521, 1.914164, 2453097, 12.05293},
 	// Prime meridian on January 1, 1990
-	{281.55531, -1.88359, 2447892.5, 202.56998},
+	{281.55531, -1.88359, 2447892.5, 202.56997},
 	// Toronto. January 1, 2000
 	{281.18486, -1.88579, 2451544.5, 202.22912},
 }
