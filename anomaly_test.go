@@ -22,7 +22,7 @@ var dataSolarMeanAnomaly = []struct {
 func TestSolarMeanAnomaly(t *testing.T) {
 	for _, tt := range dataSolarMeanAnomaly {
 		v := SolarMeanAnomaly(tt.in)
-		if Round(v, places) != Round(tt.out, places) {
+		if Round(v, DefaultPlaces) != Round(tt.out, DefaultPlaces) {
 			t.Fatalf("%f != %f", v, tt.out)
 		}
 	}

@@ -20,7 +20,7 @@ var dataEquationOfCenter = []struct {
 func TestGetEquationOfCenter(t *testing.T) {
 	for _, tt := range dataEquationOfCenter {
 		v := GetEquationOfCenter(tt.in)
-		if Round(v, places) != Round(tt.out, places) {
+		if Round(v, DefaultPlaces) != Round(tt.out, DefaultPlaces) {
 			t.Fatalf("%f != %f. Of type %t and %t", v, tt.out, v, tt.out)
 		}
 	}
