@@ -1,5 +1,6 @@
 ## go-sunrise
 
+[![Build Status](https://travis-ci.org/nathan-osman/go-sunrise.svg?branch=master)](https://travis-ci.org/nathan-osman/go-sunrise)
 [![GoDoc](https://godoc.org/github.com/nathan-osman/go-sunrise?status.svg)](https://godoc.org/github.com/nathan-osman/go-sunrise)
 [![MIT License](http://img.shields.io/badge/license-MIT-9370d8.svg?style=flat)](http://opensource.org/licenses/MIT)
 
