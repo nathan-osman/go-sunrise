@@ -8,15 +8,12 @@ var dataSolarMeanAnomaly = []struct {
 	in  float64
 	out float64
 }{
-	// April 1, 2004 - 5 degrees east longitude - this is a test problem from
-	// (http://aa.quae.nl/en/reken/zonpositie.html); the problem was slightly
-	// modified to take Julian leap seconds into account in anomaly.go - expect
-	// small deviations from the above site.
-	{1552.01468889, 87.19521},
-	// Prime meridian on January 1, 1990
-	{2447893, 281.55531},
-	// Toronto - January 1, 2000
-	{2451545.2205, 281.18486},
+	// April 1, 2004 - 5 degrees east longitude
+	{2453097, 87.18073},
+	// January 1, 1990 - prime meridian
+	{2447893, -1.88312},
+	// January 1, 2000 - Toronto
+	{2451545.2205, 357.74642},
 }
 
 func TestSolarMeanAnomaly(t *testing.T) {
