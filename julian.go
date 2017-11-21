@@ -4,9 +4,6 @@ import (
 	"time"
 )
 
-// J2000 is the Julian date for January 1, 2000, 12:00:00 TT.
-const J2000 = 2451545
-
 const (
 	secondsInADay      = 86400
 	unixEpochJulianDay = 2440587.5
