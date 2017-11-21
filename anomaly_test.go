@@ -8,12 +8,12 @@ var dataSolarMeanAnomaly = []struct {
 	in  float64
 	out float64
 }{
-	// April 1, 2004 12:00:00 UTC - 5 degrees east longitude
-	{2453097, 87.18073},
-	// January 1, 2000 12:00:00 EST - Toronto
-	{2451545.20833, 357.73443},
-	// January 1, 1990 12:00:00 UTC - prime meridian
-	{2447893, 358.11688},
+	// 1970-01-01 - 5 degrees east longitude
+	{2440587.98611, 358.29314},
+	// 2000-01-01 - Toronto (-79.38)
+	{2451545.2205, 357.74642},
+	// 2016-04-01 - prime meridian
+	{2457480, 87.06676},
 }
 
 func TestSolarMeanAnomaly(t *testing.T) {

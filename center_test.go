@@ -8,12 +8,12 @@ var dataEquationOfCenter = []struct {
 	in  float64
 	out float64
 }{
-	// April 1, 2004 12:00:00 UTC - 5 degrees east longitude
-	{87.18073, 1.91415},
-	// January 1, 2000 12:00:00 EST - Toronto
-	{357.73443, -0.07731},
-	// January 1, 1990 12:00:00 UTC - prime meridian
-	{358.11688, -0.06426},
+	// 1970-01-01 - 5 degrees east longitude
+	{358.29314, -0.05825},
+	// 2000-01-01 - Toronto (-79.38)
+	{357.74642, -0.0769},
+	// 2016-04-01 - prime meridian
+	{87.06676, 1.91404},
 }
 
 func TestEquationOfCenter(t *testing.T) {
