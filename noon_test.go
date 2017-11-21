@@ -16,8 +16,8 @@ var dataTestMeanSolarNoon = []struct {
 	{5, 1970, 1, 1, 2440587.98611},
 	// 2000-01-01 - Toronto (-79.38)
 	{-79.38, 2000, 1, 1, 2451545.2205},
-	// 2016-04-01 - prime meridian
-	{0, 2016, 4, 1, 2457480},
+	// 2004-04-01 - prime meridian
+	{0, 2004, 4, 1, 2453097},
 }
 
 func TestMeanSolarNoon(t *testing.T) {

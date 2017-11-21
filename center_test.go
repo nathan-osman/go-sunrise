@@ -12,8 +12,8 @@ var dataEquationOfCenter = []struct {
 	{358.29314, -0.05825},
 	// 2000-01-01 - Toronto (-79.38)
 	{357.74642, -0.0769},
-	// 2016-04-01 - prime meridian
-	{87.06676, 1.91404},
+	// 2004-04-01 - prime meridian
+	{87.18073, 1.91415},
 }
 
 func TestEquationOfCenter(t *testing.T) {

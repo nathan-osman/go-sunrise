@@ -15,8 +15,8 @@ var dataArgumentOfPerihelion = []struct {
 	{2440587.98611, 102.83467},
 	// 2000-01-01 - Toronto (-79.38)
 	{2451545.2205, 102.93005},
-	// 2016-04-01 - prime meridian
-	{2457480, 102.98171},
+	// 2004-04-01 - prime meridian
+	{2453097, 102.94356},
 }
 
 func TestArgumentOfPerihelion(t *testing.T) {

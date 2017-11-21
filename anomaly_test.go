@@ -12,8 +12,8 @@ var dataSolarMeanAnomaly = []struct {
 	{2440587.98611, 358.29314},
 	// 2000-01-01 - Toronto (-79.38)
 	{2451545.2205, 357.74642},
-	// 2016-04-01 - prime meridian
-	{2457480, 87.06676},
+	// 2004-04-01 - prime meridian
+	{2453097, 87.18073},
 }
 
 func TestSolarMeanAnomaly(t *testing.T) {

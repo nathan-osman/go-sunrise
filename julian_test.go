@@ -13,8 +13,8 @@ var dataTimeToJulianDay = []struct {
 	{time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC), unixEpochJulianDay},
 	// 2000-01-01 12:00:00 UTC - Toronto (-79.38)
 	{time.Date(2000, 1, 1, 12, 0, 0, 0, time.UTC), J2000},
-	// 2016-04-01 12:00:00 UTC - prime meridian
-	{time.Date(2016, 4, 1, 12, 0, 0, 0, time.UTC), 2457480},
+	// 2004-04-01 12:00:00 UTC - prime meridian
+	{time.Date(2004, 4, 1, 12, 0, 0, 0, time.UTC), 2453097},
 }
 
 func TestTimeToJulianDay(t *testing.T) {
