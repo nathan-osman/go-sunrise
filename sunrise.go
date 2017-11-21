@@ -15,8 +15,8 @@ func SunriseSunset(latitude, longitude float64, year int, month time.Month, day 
 		solarTransit      = SolarTransit(d, solarAnomaly, eclipticLongitude)
 		hourAngle         = HourAngle(latitude, eclipticLongitude)
 		frac              = hourAngle / 360
-		sunrise           = solarTransit + frac
-		sunset            = solarTransit - frac
+		sunrise           = solarTransit - frac
+		sunset            = solarTransit + frac
 	)
 	return JulianDayToTime(sunrise), JulianDayToTime(sunset)
 }
