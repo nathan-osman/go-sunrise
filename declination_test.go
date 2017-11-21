@@ -8,12 +8,12 @@ var dataDeclination = []struct {
 	in  float64
 	out float64
 }{
-	// 1970-01-01 - 5 degrees east longitude
-	{281.06956, -22.97889},
-	// 2000-01-01 - Toronto (-79.38)
+	// 1970-01-01 - prime meridian
+	{281.08372, -22.97771},
+	// 2000-01-01 - Toronto (43.65° N, 79.38° W)
 	{280.59957, -23.01707},
-	// 2004-04-01 - prime meridian
-	{12.038440, 4.75912},
+	// 2004-04-01 - (52° N, 5° E)
+	{12.02474, 4.75377},
 }
 
 func TestDeclination(t *testing.T) {

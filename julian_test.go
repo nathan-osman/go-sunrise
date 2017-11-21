@@ -9,11 +9,11 @@ var dataTimeToJulianDay = []struct {
 	in  time.Time
 	out float64
 }{
-	// 1970-01-01 00:00:00 UTC - 5 degrees east longitude
+	// 1970-01-01 00:00:00 UTC - prime meridian
 	{time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC), unixEpochJulianDay},
-	// 2000-01-01 12:00:00 UTC - Toronto (-79.38)
+	// 2000-01-01 12:00:00 UTC - Toronto (43.65° N, 79.38° W)
 	{time.Date(2000, 1, 1, 12, 0, 0, 0, time.UTC), J2000},
-	// 2004-04-01 12:00:00 UTC - prime meridian
+	// 2004-04-01 12:00:00 UTC - (52° N, 5° E)
 	{time.Date(2004, 4, 1, 12, 0, 0, 0, time.UTC), 2453097},
 }
 

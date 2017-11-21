@@ -6,12 +6,10 @@ import (
 
 // HourAngle calculates the second of the two angles required to locate a point
 // on the celestial sphere in the equatorial coordinate system.
-func HourAngle(latitude, declination float64) float64 {
-	var (
-		latitudeRad    = latitude * Degree
-		declinationRad = declination * Degree
-		numerator      = math.Sin(-0.01449) - math.Sin(latitudeRad)*math.Sin(declinationRad)
-		denominator    = math.Cos(latitudeRad) * math.Cos(declinationRad)
-	)
-	return math.Acos(numerator/denominator) / Degree
+func HourAngle(latitude, eclipticLongitude float64) float64 {
+	eclipticLongitudeRad := eclipticLongitude * Degree
+	return math.Atan2(
+		math.Sin(eclipticLongitudeRad)*math.Cos(0.40909),
+		math.Cos(eclipticLongitudeRad),
+	) / Degree
 }

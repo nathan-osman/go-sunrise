@@ -11,12 +11,12 @@ var dataArgumentOfPerihelion = []struct {
 	// 2017-01-31 - example from the wikipedia article
 	{2457784.958333, 102.98437},
 
-	// 1970-01-01 - 5 degrees east longitude
-	{2440587.98611, 102.83467},
-	// 2000-01-01 - Toronto (-79.38)
+	// 1970-01-01 - prime meridian
+	{2440588, 102.83467},
+	// 2000-01-01 - Toronto (43.65° N, 79.38° W)
 	{2451545.2205, 102.93005},
-	// 2004-04-01 - prime meridian
-	{2453097, 102.94356},
+	// 2004-04-01 - (52° N, 5° E)
+	{2453096.98611, 102.94356},
 }
 
 func TestArgumentOfPerihelion(t *testing.T) {
