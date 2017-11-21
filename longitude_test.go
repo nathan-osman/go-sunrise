@@ -5,10 +5,10 @@ import (
 )
 
 var dataEclipticLongitude = []struct {
-	anomalyIn float64
-	centerIn  float64
-	jDateIn   float64
-	out       float64
+	inAnomaly   float64
+	inCenter    float64
+	inSolarNoon float64
+	out         float64
 }{
 	// 1970-01-01 - prime meridian
 	{358.30683, -0.05778, 2440588, 281.08372},
@@ -20,7 +20,7 @@ var dataEclipticLongitude = []struct {
 
 func TestEclipticLongitude(t *testing.T) {
 	for _, tt := range dataEclipticLongitude {
-		v := EclipticLongitude(tt.anomalyIn, tt.centerIn, tt.jDateIn)
+		v := EclipticLongitude(tt.inAnomaly, tt.inCenter, tt.inSolarNoon)
 		if Round(v, DefaultPlaces) != Round(tt.out, DefaultPlaces) {
 			t.Fatalf("%f != %f", v, tt.out)
 		}
