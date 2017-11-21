@@ -8,15 +8,12 @@ var dataEquationOfCenter = []struct {
 	in  float64
 	out float64
 }{
-	// April 1, 2004 - 5 degrees east longitude; this is a test problem from
-	// (http://aa.quae.nl/en/reken/zonpositie.html) - the problem was slightly
-	// modified to take Julian leap seconds into account in anomaly.go; expect
-	// small deviations from the above site
-	{87.19521, 1.914164},
-	// Prime meridian on January 1, 1990
-	{281.55531, -1.88359},
-	// Toronto - January 1, 2000
-	{281.18486, -1.88579},
+	// April 1, 2004 12:00:00 UTC - 5 degrees east longitude
+	{87.18073, 1.91415},
+	// January 1, 2000 12:00:00 EST - Toronto
+	{357.73443, -0.07731},
+	// January 1, 1990 12:00:00 UTC - prime meridian
+	{358.11688, -0.06426},
 }
 
 func TestEquationOfCenter(t *testing.T) {
