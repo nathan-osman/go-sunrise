@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/nathan-osman/go-sunrise.svg?branch=master)](https://travis-ci.org/nathan-osman/go-sunrise)
 [![Coverage Status](https://coveralls.io/repos/github/nathan-osman/go-sunrise/badge.svg?branch=master)](https://coveralls.io/github/nathan-osman/go-sunrise?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nathan-osman/go-sunrise)](https://goreportcard.com/report/github.com/nathan-osman/go-sunrise)
 [![GoDoc](https://godoc.org/github.com/nathan-osman/go-sunrise?status.svg)](https://godoc.org/github.com/nathan-osman/go-sunrise)
 [![MIT License](http://img.shields.io/badge/license-MIT-9370d8.svg?style=flat)](http://opensource.org/licenses/MIT)
 
