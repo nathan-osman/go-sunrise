@@ -35,6 +35,13 @@ var dataSunriseSunset = []struct {
 		time.Date(2004, time.April, 1, 5, 13, 40, 0, time.UTC),
 		time.Date(2004, time.April, 1, 18, 13, 27, 0, time.UTC),
 	},
+	// 2020-06-15 - Igloolik, Canada
+	{
+		69.3321443, -81.6781126,
+		2020, time.June, 25,
+		time.Time{},
+		time.Time{},
+	},
 }
 
 func TestSunriseSunset(t *testing.T) {
