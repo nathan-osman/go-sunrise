@@ -26,4 +26,4 @@ Next, feed the information into the SunriseSunset() method:
         2000, time.January, 1,  // 2000-01-01
     )
 
-The two return values will be the sunrise and sunset times for the location on the given day as time.Time values.
+The two return values will be the sunrise and sunset times for the location on the given day as time.Time values. If sun does not rise or set, both return values will be time.Time{}.
