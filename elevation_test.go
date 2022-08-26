@@ -1,6 +1,7 @@
 package sunrise
 
 import (
+	"math"
 	"testing"
 	"time"
 )
@@ -101,6 +102,23 @@ func TestTimeOfElevation(t *testing.T) {
 		}
 		if abs(vSecond.Unix()-tt.outSecond.Unix()) > 2 {
 			t.Fatalf("%s != %s", vSecond.String(), tt.outSecond.String())
+		}
+	}
+}
+
+func TestElevation(t *testing.T) {
+	for _, tt := range dataElevation {
+		if (tt.outFirst == time.Time{}) || (tt.outSecond == time.Time{}) {
+			continue // Not reversible from output
+		}
+
+		vFirst := Elevation(tt.inLatitude, tt.inLongitude, tt.outFirst)
+		if math.Abs(vFirst-tt.inElevation) > 2 {
+			t.Fatalf("%f != %f", vFirst, tt.inElevation)
+		}
+		vSecond := Elevation(tt.inLatitude, tt.inLongitude, tt.outSecond)
+		if math.Abs(vSecond-tt.inElevation) > 2 {
+			t.Fatalf("%f != %f", vSecond, tt.inElevation)
 		}
 	}
 }
