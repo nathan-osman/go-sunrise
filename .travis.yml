@@ -1,8 +1,7 @@
 language: go
-sudo: false
 
 go:
-  - tip
+  - stable
 
 before_install:
   - go get github.com/mattn/goveralls
